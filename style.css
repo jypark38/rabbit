@@ -1,0 +1,279 @@
+body{
+    background: rgb(216, 240, 168);
+}
+.wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(100%);
+}
+
+.animal{
+    position: relative;
+}
+
+.face-top{
+    position: relative;
+
+    background-color: gray;
+    width: 270px;
+    height: 230px;
+    
+    border: 2px solid black;
+    border-radius: 40% 40% 35% 35% / 80% 80% 10% 10% ;
+    
+    margin: 0 auto;
+    transform: translateY(40%);
+}
+
+.face-bottom{
+
+    position: relative;
+    width: 280px;
+    height: 150px;
+
+    border: 2px solid;
+    background-color: white;
+
+    border-radius: 30% 30% 35% 35% / 60% 60% 39% 41% ;
+    border-top: solid 0.01px;
+
+    transform: translateY(-15%);
+}
+
+
+[class$="eye"]{
+    position: absolute;
+    width: 78px;
+    height: 95px;
+    border: 2px solid black;
+    border-radius: 47% 53% 41% 59% / 39% 37% 63% 60%  ;
+    background: white;
+    z-index: 100;
+    bottom: 30%;
+    border-top: 5px solid black;
+    border-right: 4px solid black;
+
+    animation: EYE 1s infinite alternate steps(1);
+}
+.left-eye{
+    left: 14%;
+    transform: rotate(-40deg
+    );
+}
+.right-eye{
+    right: 14%;
+    transform: scaleX(-1) rotate(-40deg
+    ) ;
+}
+
+.outer{
+    position: absolute;
+
+    top: 35%;
+    left: 15%;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #80a0fe;
+    border: 2px solid black;
+
+    z-index: 100;
+    border-radius: 100%;
+    transform: scale(90%);
+
+    animation: INNER 1s infinite alternate steps(1);
+
+}
+
+.inner {
+    position:absolute;
+    top: 40%;
+    left: 35%;
+    width: 20px;
+    height: 20px;
+
+    background-color: rgb(11, 10, 10);
+    border-radius: 100%;
+
+    transform: scale(150%);
+    animation: INNER 1s infinite alternate steps(1);
+}
+
+.nose-top{
+    position:absolute;
+    top:35%;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 40px;
+    height: 20px;
+
+    border: 3px solid black;
+    border-radius: 50%;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.nose{
+    width: 0;
+    height: 0;
+
+    margin: 0 auto;
+
+    transform: translateY(310%);
+
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid rgb(251, 165, 179);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-radius: 10px;
+}
+
+[class$=ear]{
+    position: absolute;
+    width: 70px;
+    height: 160px;
+    background: gray;
+    border-radius: 29% 60% 0% 0% / 72% 72% 10% 10% ;
+    border: 2px solid black;
+}
+.left-ear{
+    left: 15%;
+    transform: rotate(-10deg);
+}
+.right-ear{
+    right: 15%;
+    transform: scaleX(-1) rotate(-10deg);
+
+    animation : EAR 1s infinite alternate-reverse;
+}
+
+.inner-pink{
+    position: absolute;
+    width: 40px;
+    height: 160px;
+    background: pink;
+    border-radius: 75% 70% 30% 60% / 90% 70% 60% 10% ;
+    border: 2px solid black;
+    left:-6%;
+}
+
+.mouth{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -30%) rotate(90deg);
+}
+
+.mouth div {
+    margin: 0 auto;
+    width: 3px;
+    height: 9px;
+    background: black;
+    border-radius: 50% 0 0 50%;
+}
+
+.mouth .left {
+    transform: skew(-40deg);
+}
+
+.mouth .right {
+    transform:  skew(40deg);
+}
+
+[class$="beard"]{
+    position: absolute;
+    top: 260px;
+    /* left: -50px; */
+}
+.brd {
+    width: 120px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 90% 10%;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+[class$="beard"] :nth-child(1){
+    transform: translateY(-20%) rotate(30deg);
+}
+
+[class$="beard"] :nth-child(2){
+    transform: translateY(-30%) rotate(0deg);
+}
+
+[class$="beard"] :nth-child(3){
+    transform: translate(15%,-50%) rotate(-30deg);
+}
+
+.left-beard{
+    left:-25%;
+}
+
+.right-beard {
+    right: -25%;
+    transform: scaleX(-1);
+}
+
+[class$="cheek"]{
+    position: absolute;
+    top: 39%;
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    opacity: 0.8;
+    box-shadow: 0 0 10px 10px pink;
+    border-radius: 50%;
+}
+
+.left-cheek{
+    left: 6%;
+}
+.right-cheek{
+    right: 6%;
+}
+
+
+@keyframes EYE{
+
+    50% {
+        background-color: gray;
+        border-top: none;
+        border-right: none;
+        border-left:4px solid black;
+        border-bottom: 3px solid black;
+    }
+
+    100% {
+        background-color: gray;
+        border-top: none;
+        border-right: none;
+        border-left:4px solid black;
+        border-bottom: 3px solid black;
+    }
+}
+
+@keyframes INNER{
+
+    50% {
+        background-color: gray;
+        border: none;
+    }
+
+    100% {
+        background-color: gray;
+        border: none;
+    }
+}
+
+@keyframes EAR{
+    to {
+        transform-origin: center;
+        right: 12%;
+        transform: scaleX(-1) rotate(-20deg);
+    }
+}
